@@ -1,2 +1,0 @@
-# comicbooker
- Comicbook shop website

@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    background-color: #000000;
+    position: relative;
+}
+.cleaner{
+    clear: both;
+}
+/* HEADER */
+#header {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border-bottom: 1px solid rgb(35, 36, 43);
+    filter: drop-shadow(0px 0px 6px rgb(0, 0, 0));
+    position: fixed;
+    z-index: 3;
+    animation: headerfadein;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes headerfadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#logo {
+    position: relative;
+    top: 8px;
+    left: 40px;
+    float: left;
+}
+#menu {
+    float: left;
+    position: relative;
+    left: 40px;
+    top: 16px;
+    border-left: 1px solid rgb(45, 47, 54);
+}
+ul {
+    list-style-type: none;
+}
+#menu ul li {
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 20px;
+    margin-left: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid #000000;
+}
+#menu ul li a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+#menu ul li a.currentpage {
+    color:#ffffff;
+    border-bottom: 2px solid rgb(0, 211, 95);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#menu ul li a:hover {
+    animation-name: down;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes down {
+    100% {background-color: rgb(0, 0, 0);
+          color:#ffffff;
+          border-bottom: 2px solid rgb(0, 211, 95);
+          border-radius: 20px;}
+  }
+#menu a {
+    color: rgb(150, 150, 150);
+    border-bottom: 2px solid #000000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#login {
+    width: 26px;
+    height: 26px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 16px;
+    background-color: rgb(54, 56, 65);
+    border-radius: 50%;
+    border: 1px solid #1A1B20;
+}
+#login:hover {
+    animation-name: bord;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes bord {
+    100% {background-color: rgb(0, 0, 0);
+          border: 1px solid rgb(0, 211, 95);}
+}
+#searchbar {
+    /*#de3165*/
+    background-color: rgb(54, 56, 65);
+    float: right;
+    padding: 0px 15px;
+    margin: 13px 10px;
+    border-radius: 20px;
+    border: 1px solid #1A1B20;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+#searchbar:hover {
+    animation-name: transition;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes transition {
+    100% {background-color: rgb(0, 0, 0);
+          border: 1px solid rgb(0, 211, 95);}
+  }
+#search {
+    background-color: inherit;
+    float: right;
+    font-size: 16px;
+    color: gray;
+    padding-left:10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+}
+#searchbutton {
+    position: relative;
+    background-color: inherit;
+    background-image: url("../webicon/searchicon.png");
+    background-repeat: no-repeat;
+    top: 7px;
+    left: 5px;
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin: 0px;
+    border: none;
+}
+/* MAIN */
+#main {
+    position: relative;
+    width: 95%;
+    margin: 0px auto;
+    background-color: #000000;
+}
+#first {
+    float: left;
+    width: 70%;
+    margin: 5% 0.5%;
+}
+#mainimg img{
+    width: 100%;
+    border-radius: 20px;
+}
+#mainimg {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    position: relative;
+}
+#mainimg h1 {
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+    bottom: 9%;
+    left: 4%;
+    font-size: 2.5vw;
+}
+#mainimg p {
+    position: absolute;
+    z-index: 2;
+    bottom: 4%;
+    left: 4%;
+    font-size: 1.5vw;
+}
+#mainimg h3 {
+    position: absolute;
+    z-index: 2;
+    bottom: 18%;
+    left: 4%;
+    text-transform: uppercase;
+    color: rgb(0, 211, 95);
+    font-size: 1.7vw;
+}
+#second {
+    float: left;
+    width: 28%;
+    margin: 5% 0.5%;
+    position: relative;
+}
+#imgsec img{
+    width: 100%;
+    border-radius: 20px;
+}
+#imgsec {
+    width: 93%;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 2px 1px rgb(0, 0, 0);
+    position: absolute;
+}
+.darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+.darken:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+html,body {
+    height: 100%
+}
+#nonFooter {
+    min-height: 100%;
+    position:relative;
+    /* Firefox */
+    min-height: -moz-calc(100% - 150px);
+    /* WebKit */
+    min-height: -webkit-calc(100% - 150px);
+    /* Opera */
+    min-height: -o-calc(100% - 150px);
+    /* Standard */
+    min-height: calc(100% - 150px);
+}
+
+#footer {
+    height:150px;
+    margin: 0;
+    clear: both;
+    width:100%;
+    position: relative;
+    top: 15%;
+    border-top: 1px solid rgb(35, 36, 43);
+    filter: drop-shadow(0px 0px 6px rgb(0, 0, 0));
+    color: white;
+}
+#ftcontent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.ftsection {
+    float: left;
+    width: 33%;
+    height: 150px;
+    text-align: center;
+}
+.ftsection h3{
+    font-size: 24px;
+    margin: 10px 0px;
+    color: rgb(0, 255, 115);
+}
+.ftsection p:hover {
+    color: rgb(0, 211, 95);
+}
+.ftsection .box {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 20px 5px;
+}
+.ftsection #box1 {
+    width: 32px;
+    height: 32px;
+    background-image: url("../webicon/instagramicon.png");
+}
+.ftsection #box2 {
+    width: 32px;
+    height: 32px;
+    background-image: url("../webicon/twittericon.png");
+}
+.ftsection #box3 {
+    width: 32px;
+    height: 32px;
+    background-image: url("../webicon/facebookicon.png");
+}
+.ftsection #box1:hover {
+    background-image: url("../webicon/instagramicon2.png");
+}
+.ftsection #box2:hover {
+    background-image: url("../webicon/twittericon2.png");
+}
+.ftsection #box3:hover {
+    background-image: url("../webicon/facebookicon2.png");
+}
+#footer #exception {
+    padding: 10px 0px;
+    border-top: 1px solid rgb(35, 36, 43);
+    text-align: center;
+    color: rgb(150, 150, 150);
+}
+.ftsection #newsletter {
+    font-size: 16px;
+    height: 32px;
+    width: 230px;
+    padding-left: 25px;
+    border-radius: 20px;
+}
+.ftsection #newsletterbutton {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 5px;
+    border-radius: 20px;
+}
+.ftsection #newsletterbutton:hover {
+    background-color: rgb(0, 211, 95);
+}
+.ftsection #newsletterbutton .searchbtn {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+#nl #newsletter {
+    border: none;
+    margin-right: 5px;
+}
+#nl {
+    display: inline-block;
+}
+#third {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    border-top: 1px solid rgb(35, 36, 43);
+    border-bottom: 1px solid rgb(35, 36, 43);
+}
+#imgtrd h3 {
+    width: 19%;
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    z-index: 2;
+    color: rgb(0, 211, 95);
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+#imgtrd h1 {
+    width: 19%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 2;
+    color: white;
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+#imgtrd p {
+    width: 19%;
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    z-index: 2;
+    font-size: 1.3vw;
+    color: rgb(150, 150, 150);
+}
+#imgtrd img {
+    width: 60%;
+    float: right;
+    position: relative;
+    right: 10%;
+    border-radius: 20px;
+}
+#imgtrd #btn {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    background-color: rgb(3, 192, 88);
+    border-radius: 10px;
+    color: white;
+    font-size: 2vw;
+    padding: 0.4% 1.6%;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    box-shadow: 2px 3px 2px rgb(0, 49, 22);
+}
+#imgtrd #btn:hover {
+    background-color: rgb(0, 139, 63);
+}
+
+
+/************************************** SHOP ******************************************/ 
+
+#firs {
+    float: left;
+    width: 100%;
+    margin: 5% 0.5%;
+}
+#firs #part1 {
+    float: left;
+    width: 78%;
+}
+#firs #part2 {
+    float: left;
+    width: 21%;
+    border-left: 1px solid rgb(35, 36, 43);
+    border-right: 1px solid rgb(35, 36, 43);
+}
+#part2 {
+    margin-top: 40px;
+}
+#part2 #filter {
+    margin-top: 40px;
+}
+#part2 h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* border-bottom: 1px solid rgb(0, 211, 95); */
+    padding: 5px 0px;
+}
+#part2 h3 {
+    color: rgb(0, 211, 95);
+    margin-left: 4px;
+}
+.checkboxmine {
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 8px;
+    margin-top: 2px;
+    padding-left: 22px;
+    display: flex;
+    align-items: center;
+}
+.checkboxmine input {
+    position: absolute;
+    z-index: 2;
+    top:0px;
+    left: 0px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+.checkboxmine label {
+    margin-left: 15px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+#shop {
+    width: 100%;
+    text-align: center;
+    margin-bottom:40px;
+    color: rgb(255, 255, 255);
+}
+.shoplist {
+    width: 100%;
+}
+.item {
+    float: left;
+    width: 24%;
+    border: 1px solid rgb(35, 36, 43);
+    border-radius: 10px;
+    margin-left: 2px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.itemimg {
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.itemimg img {
+    width: 90%;
+    border-radius: 10px;
+}
+.itemimg img:hover {
+    box-shadow: 0px 0px 15px rgb(0, 255, 115);
+}
+#shopnavigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#shoppage {
+    width: 225px;
+    margin: 0px auto;
+}
+#shopnavigation ul {
+    display: flex;
+}
+#shopnavigation ul li{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #a1a1a1;
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 0px 3px;
+    cursor: pointer;
+    text-align: center;
+    color: rgb(0, 209, 94);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#currentpage {
+    background-color: rgba(0, 209, 94, 0.397);
+    border: none;
+    width: 26px;
+    height: 26px;
+    color: white;
+}
+#shopnavigation ul li:hover {
+    background-color: rgb(0, 209, 94);
+    color: #000000;
+}
+
+/***********************ABOUT ME*************************************************/
+
+#fir {
+    float: left;
+    width: 100%;
+    margin: 5% 0.5%;
+    position: relative;
+}
+#fir #par1 {
+    width: 100%;
+    height: 1000px;
+    border-left: 1px solid rgb(46, 46, 46);
+    border-right: 1px solid rgb(46, 46, 46);
+    background-image: url("../img/comicspic.jpg"); /*za starije browsere*/
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%), url("../img/comicspic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+#par1 #heading {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 1px #000000;
+    text-transform: uppercase;
+}
+#par1 #profpic {
+    float: left;
+    position: relative;
+    left: 20%;
+    top: 25%;
+}
+#par1 #profpic img{
+    width: 300px;
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
+}
+#par1 #dsc{
+    float: left;
+    position: relative;
+    top: 25%;
+    left: 20%;
+    text-shadow: 2px 2px 1px #000000;
+}
+#par1 #dsc p {
+    width: 600px;
+    position: relative;
+    left: 20px;
+    font-size: 34px;
+    color: rgb(255, 255, 255);
+}
+
+/**********************************Collectibles**********************************/
+
+#pa1 {
+    position: relative;
+    top: 80px;
+}
+#cheap {
+    position: relative;
+    top: 30px;
+    color: rgb(255, 255, 255);
+}
+#cheap h2 {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(0, 209, 94);
+    border-radius: 10px;
+    text-align: center;
+}
